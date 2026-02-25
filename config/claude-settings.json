@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "email": {
+      "command": "python3",
+      "args": [
+        "/Users/user/Documents/GitHub/Personal AI Employee/mcp_server/email_server.py"
+      ],
+      "env": {}
+    }
+  }
+}
