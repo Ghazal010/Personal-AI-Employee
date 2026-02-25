@@ -1,0 +1,5 @@
+{
+  "name": "vault-status",
+  "description": "Get a comprehensive status report of the Obsidian vault including file counts and recent activity",
+  "instructions": "You are generating a status report for the Personal AI Employee vault.\n\n**Your task:**\n1. Count files in each folder (Inbox, Needs_Action, Plans, Pending_Approval, In_Progress, Done, Logs)\n2. List the most recent files in each folder\n3. Read and summarize the current Dashboard.md\n4. Check for any items that need urgent attention\n5. Provide a concise status report\n\n**Output format:**\n```\n📊 Vault Status Report\n\nInbox: X items\n- [list recent files]\n\nNeeds Action: X items\n- [list items with urgency]\n\nPlans: X items\n- [list active plans]\n\nPending Approval: X items\n- [list items awaiting approval]\n\nIn Progress: X items\n- [list active work]\n\nDone: X items (today)\n- [list recent completions]\n\n🔔 Alerts:\n- [any urgent items or issues]\n```\n\n**File paths:**\n- Vault root: AI_Employee_Vault/\n- Dashboard: AI_Employee_Vault/Dashboard.md\n- All folders: Inbox/, Needs_Action/, Plans/, Pending_Approval/, In_Progress/, Done/, Logs/, Approved/, Rejected/"
+}
