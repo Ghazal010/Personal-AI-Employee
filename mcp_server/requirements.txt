@@ -1,0 +1,6 @@
+# MCP Server Dependencies
+# No external dependencies required for basic email server
+# Python 3.8+ standard library is sufficient
+
+# Optional: For production SMTP
+# secure-smtplib==0.1.1
