@@ -31,6 +31,9 @@ A production-ready, autonomous AI assistant that manages personal and business a
 - ✅ Comprehensive audit logging system
 - ✅ Weekly CEO briefing generator
 - ✅ Beautiful Obsidian dashboard
+- ✅ Plan.md generation with Claude reasoning loop
+- ✅ Human-in-the-loop approval workflow
+- ✅ Automated scheduling with cron jobs
 
 ## 📁 Project Structure
 
@@ -40,7 +43,9 @@ Personal AI Employee/
 │   ├── Dashboard.md                # Beautiful status dashboard
 │   ├── CEO_Briefing.md             # Weekly business reports
 │   ├── Audit_Logs.md               # System audit logs
+│   ├── Plan.md                     # AI-generated action plans
 │   ├── Kanban Board.md             # Task management
+│   ├── Approvals/                  # Approval history
 │   ├── Emails/                     # Email action files
 │   ├── WhatsApp_Chats/             # WhatsApp conversations
 │   ├── Inbox/                      # New items
@@ -70,8 +75,11 @@ Personal AI Employee/
 ├── audit_logger.py                 # Centralized logging
 ├── cross_domain_integration.py     # Personal ↔ Business workflows
 ├── ralph_wiggum_loop.py            # Autonomous agent
-├── skills_cli.py                   # CLI for skills
+├── generate_plan.py                # Plan.md generator with reasoning loop
 ├── generate_ceo_briefing.py        # Weekly reports
+├── approval_workflow.py            # Human-in-the-loop approvals
+├── skills_cli.py                   # CLI for skills
+├── setup_cron.sh                   # Automated scheduling setup
 └── logs/                           # Audit logs (JSONL)
 ```
 
@@ -247,6 +255,9 @@ result = integration.execute_workflow('whatsapp_to_customer', {
 
 ### Generate Reports
 ```bash
+# Generate Plan.md with Claude reasoning loop
+python3 generate_plan.py
+
 # Weekly CEO briefing
 python3 generate_ceo_briefing.py
 
@@ -254,8 +265,39 @@ python3 generate_ceo_briefing.py
 python3 generate_audit_summary.py
 
 # View in Obsidian
+open AI_Employee_Vault/Plan.md
 open AI_Employee_Vault/CEO_Briefing.md
 open AI_Employee_Vault/Audit_Logs.md
+```
+
+### Human-in-the-Loop Approval
+```python
+from approval_workflow import require_approval
+
+# Request approval before sensitive action
+if require_approval('PostTweetSkill', {'text': 'Hello!'}, 'Posting tweet'):
+    # Action approved - execute
+    post_tweet(text)
+else:
+    # Action rejected - skip
+    print("Action cancelled by user")
+
+# View approval history
+python3 approval_workflow.py
+```
+
+### Automated Scheduling
+```bash
+# Setup cron jobs for automated execution
+./setup_cron.sh
+
+# View installed cron jobs
+crontab -l
+
+# Monitor scheduled task logs
+tail -f logs/*.log
+tail -f logs/plan_generator.log
+tail -f logs/gmail_watcher.log
 ```
 
 ## 🔧 Configuration
@@ -425,6 +467,10 @@ All credential files are in `.gitignore` and must be created from templates.
 - [x] Task management system
 - [x] Automated email processing
 - [x] Action file generation
+- [x] Plan.md generation with Claude reasoning loop
+- [x] Human-in-the-loop approval workflow
+- [x] Automated scheduling with cron jobs
+- [ ] LinkedIn auto-posting (deferred)
 
 ### Gold Tier ✅ (All 11 Requirements Complete)
 - [x] **Audit Logging System** - JSONL format with rotating files
@@ -444,6 +490,7 @@ All credential files are in `.gitignore` and must be created from templates.
 Comprehensive documentation available:
 
 - **[ARCHITECTURE.md](ARCHITECTURE.md)** - Complete system architecture with diagrams
+- **[SILVER_TIER_COMPLETION.md](SILVER_TIER_COMPLETION.md)** - Silver Tier features documentation
 - **[CROSS_DOMAIN_INTEGRATION_DOCS.md](CROSS_DOMAIN_INTEGRATION_DOCS.md)** - Integration workflows
 - **[ODOO_MCP_SERVER_DOCS.md](ODOO_MCP_SERVER_DOCS.md)** - Odoo integration guide
 - **[ODOO_INSTALLATION_DOCS.md](ODOO_INSTALLATION_DOCS.md)** - Odoo setup instructions
