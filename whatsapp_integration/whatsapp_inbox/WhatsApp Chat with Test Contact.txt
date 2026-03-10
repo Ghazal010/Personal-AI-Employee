@@ -1,0 +1,8 @@
+[10/03/26, 16:05:23] Test Contact: Hello! This is a test message
+[10/03/26, 16:06:15] Test Contact: Can you help me with the project?
+[10/03/26, 16:07:30] You: Sure, I'll send you the details
+[10/03/26, 16:08:45] Test Contact: Great! When can we meet?
+[10/03/26, 16:09:12] You: How about tomorrow at 3pm?
+[10/03/26, 16:10:00] Test Contact: Perfect! See you then
+[10/03/26, 16:10:30] Test Contact: Also, please bring the documents
+[10/03/26, 16:11:00] You: Will do!

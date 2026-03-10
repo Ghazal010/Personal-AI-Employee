@@ -1,0 +1,541 @@
+/* Personal AI Employee - Custom Dashboard Styling */
+
+/* ============================================
+   CALLOUT COLORS - Beautiful & Professional
+   ============================================ */
+
+/* Success/Active callouts - Green theme */
+.callout[data-callout="success"] {
+    --callout-color: 46, 204, 113;
+    background-color: rgba(46, 204, 113, 0.1);
+    border-left: 4px solid rgb(46, 204, 113);
+}
+
+/* Info callouts - Blue theme */
+.callout[data-callout="info"] {
+    --callout-color: 52, 152, 219;
+    background-color: rgba(52, 152, 219, 0.1);
+    border-left: 4px solid rgb(52, 152, 219);
+}
+
+/* Warning callouts - Orange theme */
+.callout[data-callout="warning"] {
+    --callout-color: 230, 126, 34;
+    background-color: rgba(230, 126, 34, 0.1);
+    border-left: 4px solid rgb(230, 126, 34);
+}
+
+/* Danger/Critical callouts - Red theme */
+.callout[data-callout="danger"] {
+    --callout-color: 231, 76, 60;
+    background-color: rgba(231, 76, 60, 0.1);
+    border-left: 4px solid rgb(231, 76, 60);
+}
+
+/* Tip callouts - Purple theme */
+.callout[data-callout="tip"] {
+    --callout-color: 155, 89, 182;
+    background-color: rgba(155, 89, 182, 0.1);
+    border-left: 4px solid rgb(155, 89, 182);
+}
+
+/* Note callouts - Gray theme */
+.callout[data-callout="note"] {
+    --callout-color: 149, 165, 166;
+    background-color: rgba(149, 165, 166, 0.1);
+    border-left: 4px solid rgb(149, 165, 166);
+}
+
+/* Example callouts - Teal theme */
+.callout[data-callout="example"] {
+    --callout-color: 26, 188, 156;
+    background-color: rgba(26, 188, 156, 0.1);
+    border-left: 4px solid rgb(26, 188, 156);
+}
+
+/* Abstract callouts - Indigo theme */
+.callout[data-callout="abstract"] {
+    --callout-color: 102, 51, 153;
+    background-color: rgba(102, 51, 153, 0.1);
+    border-left: 4px solid rgb(102, 51, 153);
+}
+
+/* ============================================
+   DASHBOARD SPECIFIC STYLING
+   ============================================ */
+
+/* Dashboard title */
+.markdown-preview-view h1:first-child {
+    color: #3498db;
+    font-size: 2.5em;
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 3px solid #3498db;
+    margin-bottom: 30px;
+}
+
+/* Section headers */
+.markdown-preview-view h2 {
+    color: #2c3e50;
+    font-size: 1.8em;
+    padding: 10px 0;
+    border-bottom: 2px solid #ecf0f1;
+    margin-top: 30px;
+}
+
+/* Tables - Beautiful styling */
+.markdown-preview-view table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.markdown-preview-view table thead {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.markdown-preview-view table th {
+    padding: 12px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.markdown-preview-view table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+.markdown-preview-view table tbody tr:hover {
+    background-color: rgba(52, 152, 219, 0.05);
+    transition: background-color 0.2s ease;
+}
+
+/* Code blocks */
+.markdown-preview-view code {
+    background-color: rgba(52, 152, 219, 0.1);
+    padding: 2px 6px;
+    border-radius: 3px;
+    color: #2980b9;
+    font-family: 'Monaco', 'Courier New', monospace;
+}
+
+.markdown-preview-view pre code {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 15px;
+    border-radius: 5px;
+    display: block;
+}
+
+/* Links */
+.markdown-preview-view a {
+    color: #3498db;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.2s ease;
+}
+
+.markdown-preview-view a:hover {
+    border-bottom: 1px solid #3498db;
+}
+
+/* Blockquotes */
+.markdown-preview-view blockquote {
+    border-left: 4px solid #3498db;
+    background-color: rgba(52, 152, 219, 0.05);
+    padding: 10px 20px;
+    margin: 20px 0;
+    font-style: italic;
+}
+
+/* Horizontal rules */
+.markdown-preview-view hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #3498db, transparent);
+    margin: 30px 0;
+}
+
+/* Checkboxes */
+.markdown-preview-view input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.markdown-preview-view input[type="checkbox"]:checked {
+    accent-color: #2ecc71;
+}
+
+/* Status indicators */
+.markdown-preview-view li:has(input[type="checkbox"]:checked) {
+    color: #95a5a6;
+    text-decoration: line-through;
+}
+
+/* ============================================
+   EMOJI & ICON STYLING
+   ============================================ */
+
+/* Make emojis slightly larger */
+.markdown-preview-view .emoji {
+    font-size: 1.2em;
+    vertical-align: middle;
+}
+
+/* ============================================
+   RESPONSIVE & MOBILE
+   ============================================ */
+
+@media (max-width: 768px) {
+    .markdown-preview-view h1:first-child {
+        font-size: 2em;
+    }
+
+    .markdown-preview-view h2 {
+        font-size: 1.5em;
+    }
+
+    .markdown-preview-view table {
+        font-size: 0.9em;
+    }
+}
+
+/* ============================================
+   DARK MODE ADJUSTMENTS
+   ============================================ */
+
+.theme-dark .markdown-preview-view h1:first-child {
+    color: #5dade2;
+    border-bottom-color: #5dade2;
+}
+
+.theme-dark .markdown-preview-view h2 {
+    color: #ecf0f1;
+    border-bottom-color: #34495e;
+}
+
+.theme-dark .markdown-preview-view table thead {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.theme-dark .markdown-preview-view table td {
+    border-bottom-color: #34495e;
+}
+
+.theme-dark .markdown-preview-view table tbody tr:hover {
+    background-color: rgba(52, 152, 219, 0.1);
+}
+
+/* ============================================
+   CARD-BASED DASHBOARD LAYOUT
+   ============================================ */
+
+/* Dashboard grid container */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+/* Widget cards */
+.dashboard-grid > .callout {
+    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+    margin: 10px 0;
+}
+
+.dashboard-grid > .callout:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.15), 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Large counter displays */
+.dashboard-grid h3 {
+    font-size: 3em;
+    font-weight: bold;
+    margin: 20px 0;
+    text-align: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Progress bars */
+.markdown-preview-view pre {
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    border-radius: 10px;
+    padding: 8px;
+    margin: 10px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.markdown-preview-view pre::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.3) 50%, transparent 100%);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* ============================================
+   KANBAN BOARD LAYOUT
+   ============================================ */
+
+/* Kanban container */
+.kanban-board {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+    padding: 20px 0;
+}
+
+/* Kanban columns */
+.kanban-board > .callout {
+    background: rgba(255,255,255,0.05);
+    border-radius: 10px;
+    padding: 15px;
+    min-height: 400px;
+    border: 2px solid rgba(255,255,255,0.1);
+    transition: all 0.3s ease;
+}
+
+.kanban-board > .callout:hover {
+    border-color: rgba(102, 126, 234, 0.5);
+    box-shadow: 0 8px 16px rgba(102, 126, 234, 0.2);
+}
+
+/* Kanban cards within columns */
+.kanban-board .callout-content > p {
+    background: rgba(255,255,255,0.08);
+    border-radius: 8px;
+    padding: 12px;
+    margin: 8px 0;
+    border-left: 3px solid #667eea;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.kanban-board .callout-content > p:hover {
+    background: rgba(255,255,255,0.12);
+    transform: translateX(5px);
+    border-left-width: 5px;
+}
+
+/* Kanban column headers */
+.kanban-board .callout-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(255,255,255,0.2);
+}
+
+/* ============================================
+   WIDGET SPECIFIC STYLING
+   ============================================ */
+
+/* Stats widget - special styling */
+.callout[data-callout="abstract"] table {
+    background: transparent;
+    box-shadow: none;
+}
+
+.callout[data-callout="abstract"] table td {
+    font-size: 1.1em;
+    padding: 8px 12px;
+}
+
+/* Activity feed - timeline style */
+.callout[data-callout="example"] hr {
+    margin: 15px 0;
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(255,255,255,0.3), transparent);
+}
+
+/* Quick actions - button style */
+.callout[data-callout="tip"] code {
+    display: block;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin: 8px 0;
+    text-align: center;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.callout[data-callout="tip"] code:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+/* Calendar widget styling */
+.callout[data-callout="note"] table {
+    text-align: center;
+    font-family: monospace;
+}
+
+.callout[data-callout="note"] table td {
+    padding: 8px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.callout[data-callout="note"] table td strong {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .dashboard-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+    }
+
+    .kanban-board {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 12px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 10px 0;
+    }
+
+    .kanban-board {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .dashboard-grid h3 {
+        font-size: 2.5em;
+    }
+
+    .kanban-board > .callout {
+        min-height: 300px;
+    }
+}
+
+/* ============================================
+   ANIMATIONS & EFFECTS
+   ============================================ */
+
+/* Fade in animation for widgets */
+.dashboard-grid > .callout,
+.kanban-board > .callout {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Pulse animation for critical alerts */
+.callout[data-callout="danger"] {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 0 10px rgba(231, 76, 60, 0);
+    }
+}
+
+/* Glow effect for success items */
+.callout[data-callout="success"]:hover {
+    box-shadow: 0 0 20px rgba(46, 204, 113, 0.3);
+}
+
+/* ============================================
+   DARK MODE ENHANCEMENTS
+   ============================================ */
+
+.theme-dark .dashboard-grid > .callout {
+    background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
+}
+
+.theme-dark .kanban-board > .callout {
+    background: rgba(255,255,255,0.03);
+    border-color: rgba(255,255,255,0.08);
+}
+
+.theme-dark .kanban-board .callout-content > p {
+    background: rgba(255,255,255,0.05);
+}
+
+.theme-dark .kanban-board .callout-content > p:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+/* Center align content */
+div[align="center"] {
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Spacing utilities */
+.markdown-preview-view hr {
+    margin: 30px 0;
+}
+
+/* Link styling in widgets */
+.callout a {
+    color: #667eea;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s ease;
+}
+
+.callout a:hover {
+    border-bottom: 2px solid #667eea;
+}
+
